@@ -107,20 +107,21 @@ a { color: inherit; text-decoration: none; }
 
 .nav__dropdown-menu {
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-4px);
   background: var(--sd-color-surface-raised);
   border: 1px solid var(--sd-color-border-default);
   border-radius: var(--sd-radius-panel);
   box-shadow: var(--sd-shadow-dropdown);
   min-width: 240px;
   padding: 8px;
+  padding-top: 16px; /* bridges the visual gap without breaking hover */
+  margin-top: -8px;  /* pulls menu up so the padding fills the old gap */
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--sd-motion-interactive) var(--sd-motion-easing),
               transform var(--sd-motion-interactive) var(--sd-motion-easing);
-  transform: translateX(-50%) translateY(-4px);
 }
 
 .nav__dropdown:hover .nav__dropdown-menu {
