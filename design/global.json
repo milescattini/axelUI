@@ -1,0 +1,115 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "$metadata": {
+    "description": "Global token palette — raw values only, no intent assigned here. Swap this file per client."
+  },
+
+  "color": {
+    "neutral": {
+      "0":   { "$value": "#FFFFFF",   "$type": "color" },
+      "50":  { "$value": "#F9F8F6",   "$type": "color", "$description": "Warm off-white — page background" },
+      "100": { "$value": "#F1EEE9",   "$type": "color" },
+      "200": { "$value": "#E3DEDA",   "$type": "color" },
+      "400": { "$value": "#9E9690",   "$type": "color" },
+      "600": { "$value": "#635D58",   "$type": "color" },
+      "800": { "$value": "#2C2926",   "$type": "color" },
+      "900": { "$value": "#1A1816",   "$type": "color", "$description": "Warm dark — not pure black" }
+    },
+    "blue": {
+      "50":  { "$value": "#EDF3FF",   "$type": "color" },
+      "100": { "$value": "#D6E4FF",   "$type": "color" },
+      "500": { "$value": "#2C5FD4",   "$type": "color", "$description": "Calm, trustworthy — the default accent" },
+      "600": { "$value": "#1E4DB0",   "$type": "color" },
+      "900": { "$value": "#0F2858",   "$type": "color" }
+    }
+  },
+
+  "font": {
+    "family": {
+      "display": { "$value": "'Plus Jakarta Sans', system-ui, sans-serif", "$type": "fontFamily" },
+      "mono":    { "$value": "'DM Mono', 'Fira Mono', monospace",          "$type": "fontFamily" }
+    },
+    "size": {
+      "xs":  { "$value": "0.75rem",  "$type": "dimension", "$description": "12px" },
+      "sm":  { "$value": "0.875rem", "$type": "dimension", "$description": "14px" },
+      "base":{ "$value": "1rem",     "$type": "dimension", "$description": "16px" },
+      "md":  { "$value": "1.125rem", "$type": "dimension", "$description": "18px" },
+      "lg":  { "$value": "1.25rem",  "$type": "dimension", "$description": "20px" },
+      "xl":  { "$value": "1.5rem",   "$type": "dimension", "$description": "24px" },
+      "2xl": { "$value": "2rem",     "$type": "dimension", "$description": "32px" },
+      "3xl": { "$value": "2.5rem",   "$type": "dimension", "$description": "40px" },
+      "4xl": { "$value": "3.5rem",   "$type": "dimension", "$description": "56px" }
+    },
+    "weight": {
+      "regular": { "$value": "400", "$type": "fontWeight" },
+      "medium":  { "$value": "500", "$type": "fontWeight" },
+      "strong":  { "$value": "600", "$type": "fontWeight", "$description": "Logo and hero headlines only — not for body emphasis" }
+    },
+    "leading": {
+      "tight":   { "$value": "1.1",  "$type": "number", "$description": "Display headings" },
+      "snug":    { "$value": "1.3",  "$type": "number", "$description": "Subheadings" },
+      "base":    { "$value": "1.6",  "$type": "number", "$description": "Paragraphs" },
+      "relaxed": { "$value": "1.75", "$type": "number", "$description": "Long-form prose" }
+    },
+    "tracking": {
+      "tight":   { "$value": "-0.03em", "$type": "dimension", "$description": "Large display text" },
+      "normal":  { "$value": "0",       "$type": "dimension" },
+      "wide":    { "$value": "0.06em",  "$type": "dimension", "$description": "Uppercase labels only" }
+    }
+  },
+
+  "space": {
+    "1":  { "$value": "4px",  "$type": "dimension" },
+    "2":  { "$value": "8px",  "$type": "dimension" },
+    "3":  { "$value": "12px", "$type": "dimension" },
+    "4":  { "$value": "16px", "$type": "dimension" },
+    "5":  { "$value": "20px", "$type": "dimension" },
+    "6":  { "$value": "24px", "$type": "dimension" },
+    "8":  { "$value": "32px", "$type": "dimension" },
+    "10": { "$value": "40px", "$type": "dimension" },
+    "12": { "$value": "48px", "$type": "dimension" },
+    "16": { "$value": "64px", "$type": "dimension" },
+    "20": { "$value": "80px", "$type": "dimension" },
+    "24": { "$value": "96px", "$type": "dimension" }
+  },
+
+  "border": {
+    "width": {
+      "default": { "$value": "1px", "$type": "dimension" },
+      "strong":  { "$value": "2px", "$type": "dimension" }
+    },
+    "radius": {
+      "sm":   { "$value": "4px",   "$type": "dimension", "$description": "Inputs, tags, small chips" },
+      "md":   { "$value": "8px",   "$type": "dimension", "$description": "Cards, buttons" },
+      "lg":   { "$value": "12px",  "$type": "dimension", "$description": "Large panels, modals" },
+      "xl":   { "$value": "16px",  "$type": "dimension", "$description": "Hero sections, feature blocks" },
+      "pill": { "$value": "999px", "$type": "dimension", "$description": "Badges, toggle pills" }
+    }
+  },
+
+  "shadow": {
+    "card": {
+      "$value": "0 1px 3px rgba(26,24,22,0.06), 0 1px 2px rgba(26,24,22,0.04)",
+      "$type": "shadow",
+      "$description": "Subtle card hover only — not for resting state"
+    },
+    "float": {
+      "$value": "0 4px 12px rgba(26,24,22,0.10), 0 1px 4px rgba(26,24,22,0.06)",
+      "$type": "shadow",
+      "$description": "Dropdowns, popovers"
+    }
+  },
+
+  "motion": {
+    "duration": {
+      "fast":    { "$value": "100ms", "$type": "duration", "$description": "Micro-interactions: icon swaps, checkbox ticks" },
+      "default": { "$value": "200ms", "$type": "duration", "$description": "Most transitions: hover, focus, reveal" },
+      "slow":    { "$value": "400ms", "$type": "duration", "$description": "Page-level: section fades, hero animation" }
+    },
+    "easing": {
+      "standard": { "$value": "cubic-bezier(0.4, 0, 0.2, 1)", "$type": "cubicBezier" },
+      "enter":    { "$value": "cubic-bezier(0, 0, 0.2, 1)",   "$type": "cubicBezier" },
+      "exit":     { "$value": "cubic-bezier(0.4, 0, 1, 1)",   "$type": "cubicBezier" }
+    }
+  }
+}

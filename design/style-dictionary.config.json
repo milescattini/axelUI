@@ -1,0 +1,20 @@
+{
+  "source": ["design/global.json", "design/semantic.json"],
+  "platforms": {
+    "css": {
+      "transformGroup": "css",
+      "prefix": "sd",
+      "buildPath": "public/",
+      "files": [
+        {
+          "destination": "tokens.css",
+          "format": "css/variables",
+          "options": {
+            "selector": ":root",
+            "outputReferences": false
+          }
+        }
+      ]
+    }
+  }
+}
