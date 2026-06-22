@@ -496,6 +496,310 @@ a { color: inherit; text-decoration: none; }
   line-height: var(--sd-font-leading-body);
 }
 
+/* ============================================================
+   Data visualisation palette — semantic data colours
+   ============================================================ */
+:root {
+  --dv-positive: #2D9B6B;
+  --dv-warning:  #D97706;
+  --dv-alert:    #C47B3A;
+  --dv-critical: #DC2626;
+  --dv-neutral:  #6B7280;
+}
+
+/* ============================================================
+   Hero — split layout (text left, visual right)
+   ============================================================ */
+.hero--split .hero__inner {
+  max-width: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* ============================================================
+   Chart preview — sales hero
+   ============================================================ */
+.chart-preview {
+  background: rgba(249, 248, 246, 0.04);
+  border: 1px solid rgba(249, 248, 246, 0.1);
+  border-radius: var(--sd-radius-panel);
+  padding: var(--sd-space-component-lg);
+}
+
+.chart-preview svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.chart-title {
+  font-size: var(--sd-font-size-label);
+  font-weight: var(--sd-font-weight-heading);
+  letter-spacing: var(--sd-font-tracking-label);
+  text-transform: uppercase;
+  color: rgba(249, 248, 246, 0.4);
+}
+
+.chart-legend {
+  display: flex;
+  gap: 16px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--sd-font-size-label);
+  color: rgba(249, 248, 246, 0.5);
+}
+
+.legend-item::before {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.legend-item--profit::before  { background: var(--dv-positive); }
+.legend-item--expense::before { background: var(--dv-alert); }
+
+/* ============================================================
+   Dashboard preview — risk hero
+   ============================================================ */
+.dashboard-preview {
+  background: rgba(249, 248, 246, 0.04);
+  border: 1px solid rgba(249, 248, 246, 0.1);
+  border-radius: var(--sd-radius-panel);
+  padding: var(--sd-space-component-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dash-title {
+  font-size: var(--sd-font-size-label);
+  font-weight: var(--sd-font-weight-heading);
+  letter-spacing: var(--sd-font-tracking-label);
+  text-transform: uppercase;
+  color: rgba(249, 248, 246, 0.4);
+}
+
+.dash-live {
+  font-size: var(--sd-font-size-label);
+  font-weight: var(--sd-font-weight-heading);
+  letter-spacing: var(--sd-font-tracking-label);
+  text-transform: uppercase;
+  color: var(--dv-positive);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dash-live::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--dv-positive);
+}
+
+.dash-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.dash-stat {
+  background: rgba(249, 248, 246, 0.05);
+  border: 1px solid rgba(249, 248, 246, 0.07);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.dash-stat__value {
+  display: block;
+  font-size: var(--sd-font-size-h3);
+  font-weight: var(--sd-font-weight-heading);
+  color: var(--sd-color-text-inverse);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.dash-stat--warn  .dash-stat__value { color: var(--dv-warning); }
+.dash-stat--alert .dash-stat__value { color: var(--dv-alert); }
+
+.dash-stat__label {
+  font-size: var(--sd-font-size-label);
+  font-weight: var(--sd-font-weight-heading);
+  letter-spacing: var(--sd-font-tracking-label);
+  text-transform: uppercase;
+  color: rgba(249, 248, 246, 0.35);
+  line-height: 1.3;
+}
+
+.dash-chart-wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.dash-risk-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dash-risk-row {
+  display: grid;
+  grid-template-columns: 76px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  background: rgba(249, 248, 246, 0.04);
+  border-radius: 6px;
+}
+
+.dash-risk-id {
+  font-size: var(--sd-font-size-label);
+  color: rgba(249, 248, 246, 0.3);
+  font-weight: var(--sd-font-weight-heading);
+  letter-spacing: 0.04em;
+}
+
+.dash-risk-title {
+  font-size: var(--sd-font-size-label);
+  color: var(--sd-color-text-inverse);
+  font-weight: var(--sd-font-weight-emphasis);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dash-risk-badge {
+  font-size: var(--sd-font-size-label);
+  font-weight: var(--sd-font-weight-heading);
+  padding: 2px 8px;
+  border-radius: var(--sd-radius-badge);
+  white-space: nowrap;
+}
+
+.dash-risk-badge--high   { background: rgba(217, 119,  6, 0.18); color: var(--dv-warning); }
+.dash-risk-badge--medium { background: rgba(196, 123, 58, 0.18); color: var(--dv-alert); }
+.dash-risk-badge--low    { background: rgba( 45, 155,107, 0.15); color: var(--dv-positive); }
+
+/* ============================================================
+   Integration badges
+   ============================================================ */
+.integration-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.integration-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--sd-color-surface-raised);
+  border: 1px solid var(--sd-color-border-default);
+  border-radius: var(--sd-radius-button);
+  font-size: var(--sd-font-size-caption);
+  font-weight: var(--sd-font-weight-emphasis);
+  color: var(--sd-color-text-primary);
+}
+
+/* ============================================================
+   Stats callout row
+   ============================================================ */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--sd-space-layout-gutter);
+}
+
+.stat-item {
+  padding: var(--sd-space-component-lg) 0;
+  border-top: 2px solid var(--sd-color-accent-default);
+}
+
+.stat-item__value {
+  display: block;
+  font-size: var(--sd-font-size-h1);
+  font-weight: var(--sd-font-weight-heading);
+  letter-spacing: var(--sd-font-tracking-heading);
+  color: var(--sd-color-text-primary);
+  margin-bottom: 6px;
+}
+
+.stat-item__label {
+  font-size: var(--sd-font-size-caption);
+  color: var(--sd-color-text-secondary);
+  line-height: var(--sd-font-leading-body);
+}
+
+/* ============================================================
+   Risk severity key
+   ============================================================ */
+.risk-level-key {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.risk-level {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--sd-font-size-caption);
+  color: var(--sd-color-text-secondary);
+}
+
+.risk-level__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.risk-level--critical .risk-level__dot { background: var(--dv-critical); }
+.risk-level--high     .risk-level__dot { background: var(--dv-warning); }
+.risk-level--medium   .risk-level__dot { background: var(--dv-alert); }
+.risk-level--low      .risk-level__dot { background: var(--dv-positive); }
+
+/* ============================================================
+   Responsive additions
+   ============================================================ */
+@media (max-width: 860px) {
+  .hero--split .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero__visual {
+    display: none;
+  }
+}
+
 /* Responsive */
 @media (max-width: 640px) {
   .hero {

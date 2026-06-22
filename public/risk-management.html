@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risk Management — Axel</title>
+  <meta name="description" content="A risk register built for Australian SMBs. Log risks and opportunities, score them, track treatment, escalate when appetite is breached, and report to your board.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__wordmark">Axel</a>
+      <nav class="nav__links">
+        <div class="nav__dropdown">
+          <span class="nav__dropdown-trigger">Products</span>
+          <div class="nav__dropdown-menu">
+            <a href="/disp.html" class="nav__dropdown-item">
+              <strong>DISP Readiness</strong>
+              <span>Defence Industry Security Program</span>
+            </a>
+            <a href="/iso9001.html" class="nav__dropdown-item">
+              <strong>ISO 9001</strong>
+              <span>Quality management certification</span>
+            </a>
+            <a href="/essential-eight.html" class="nav__dropdown-item">
+              <strong>Essential Eight</strong>
+              <span>Cyber security maturity</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
+          <span class="nav__dropdown-trigger">Tools</span>
+          <div class="nav__dropdown-menu">
+            <a href="/sales.html" class="nav__dropdown-item">
+              <strong>Sales Management</strong>
+              <span>Pipeline, forecasting, Xero sync</span>
+            </a>
+            <a href="/risk-management.html" class="nav__dropdown-item nav__dropdown-item--active">
+              <strong>Risk Management</strong>
+              <span>Risk register and reporting</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <a href="#contact" class="btn btn--ghost">Book a call</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero--split">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow">RISK REGISTER · SCORING · ESCALATION · REPORTING</p>
+        <h1>The risk you haven't logged is the one that bites you.</h1>
+        <p class="lead">Most small businesses manage risk in a chat thread or not at all. Axel Risk Management gives you a structured register, a scoring matrix, escalation workflows, and board-ready reports — without a compliance officer on payroll.</p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Book a 30-minute call</a>
+          <a href="#features" class="btn btn--ghost-inverse">See what's included</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="dashboard-preview">
+          <div class="dash-header">
+            <span class="dash-title">Risk &amp; Opportunity Overview</span>
+            <span class="dash-live">Live</span>
+          </div>
+          <div class="dash-stats">
+            <div class="dash-stat">
+              <span class="dash-stat__value">4</span>
+              <span class="dash-stat__label">Open risks</span>
+            </div>
+            <div class="dash-stat dash-stat--warn">
+              <span class="dash-stat__value">1</span>
+              <span class="dash-stat__label">High</span>
+            </div>
+            <div class="dash-stat">
+              <span class="dash-stat__value">0</span>
+              <span class="dash-stat__label">Critical</span>
+            </div>
+            <div class="dash-stat dash-stat--alert">
+              <span class="dash-stat__value">1</span>
+              <span class="dash-stat__label">Escalated</span>
+            </div>
+          </div>
+          <div class="dash-chart-wrap">
+            <svg viewBox="0 0 420 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Title -->
+              <text x="0" y="10" fill="rgba(249,248,246,0.3)" font-size="8" font-family="'Plus Jakarta Sans', sans-serif" letter-spacing="0.05em" text-transform="uppercase">BY STATUS</text>
+
+              <!-- Open: 2 (accent) -->
+              <text x="0" y="28" fill="rgba(249,248,246,0.45)" font-size="9" font-family="'Plus Jakarta Sans', sans-serif">Open</text>
+              <rect x="90" y="19" width="168" height="9" rx="2" fill="#2C5FD4" opacity="0.55"/>
+              <text x="264" y="28" fill="rgba(249,248,246,0.45)" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" dx="5">2</text>
+
+              <!-- Escalated: 1 (alert) -->
+              <text x="0" y="47" fill="rgba(249,248,246,0.45)" font-size="9" font-family="'Plus Jakarta Sans', sans-serif">Escalated</text>
+              <rect x="90" y="38" width="84" height="9" rx="2" fill="#C47B3A" opacity="0.65"/>
+              <text x="180" y="47" fill="rgba(249,248,246,0.45)" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" dx="5">1</text>
+
+              <!-- Closure Requested: 1 (neutral) -->
+              <text x="0" y="66" fill="rgba(249,248,246,0.45)" font-size="9" font-family="'Plus Jakarta Sans', sans-serif">Closure Req.</text>
+              <rect x="90" y="57" width="84" height="9" rx="2" fill="#6B7280" opacity="0.45"/>
+              <text x="180" y="66" fill="rgba(249,248,246,0.45)" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" dx="5">1</text>
+
+              <!-- Closed: 0 -->
+              <text x="0" y="85" fill="rgba(249,248,246,0.25)" font-size="9" font-family="'Plus Jakarta Sans', sans-serif">Closed</text>
+              <rect x="90" y="76" width="8" height="9" rx="2" fill="#6B7280" opacity="0.2"/>
+              <text x="104" y="85" fill="rgba(249,248,246,0.25)" font-size="9" font-family="'Plus Jakarta Sans', sans-serif">0</text>
+            </svg>
+          </div>
+          <div class="dash-risk-list">
+            <div class="dash-risk-row">
+              <span class="dash-risk-id">RISK-000001</span>
+              <span class="dash-risk-title">Key supplier dependency</span>
+              <span class="dash-risk-badge dash-risk-badge--high">12 · High</span>
+            </div>
+            <div class="dash-risk-row">
+              <span class="dash-risk-id">RISK-000002</span>
+              <span class="dash-risk-title">IT system availability</span>
+              <span class="dash-risk-badge dash-risk-badge--medium">9 · Medium</span>
+            </div>
+            <div class="dash-risk-row">
+              <span class="dash-risk-id">RISK-000003</span>
+              <span class="dash-risk-title">Staff retention</span>
+              <span class="dash-risk-badge dash-risk-badge--low">4 · Low</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="section section--subtle" id="problem">
+    <div class="container">
+      <div class="prose-block">
+        <h2>Most SMBs don't have a risk register. They have a chat thread and a spreadsheet that nobody updates.</h2>
+        <p class="lead">That works until a risk becomes an incident — and you spend the next week explaining to a client or insurer what you had documented. The answer is usually "not much."</p>
+        <p>A structured risk register isn't a compliance checkbox. It's the tool that tells you which operational, financial, and reputational risks need treatment, which ones you've accepted, and which ones have breached your risk appetite and need to escalate to a director or board. Axel gives you that register — and keeps it current.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="container">
+      <p class="eyebrow">WHAT'S INCLUDED</p>
+      <h2 class="section__heading">Everything a managed risk register needs.</h2>
+      <div class="detail-grid">
+
+        <div class="detail-card">
+          <h3>Risk and opportunity register</h3>
+          <p>Log every risk and opportunity with a title, description, category, owner, and treatment. The register gives you an audit trail — who changed what, and when.</p>
+          <ul class="feature-list">
+            <li>Risk and opportunity types</li>
+            <li>Category pillars (Corporate, Build, Go-To-Market, Deliver)</li>
+            <li>Owner assignment and review dates</li>
+            <li>Full change history</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <h3>Likelihood × consequence scoring</h3>
+          <p>Risks are scored on a 5×5 matrix — likelihood against consequence. The residual score (post-treatment) drives the severity band: Low, Medium, High, or Critical.</p>
+          <ul class="feature-list">
+            <li>Inherent and residual risk scores</li>
+            <li>Appetite threshold per category</li>
+            <li>Outside-appetite flagging</li>
+            <li>Trend tracking (improving, stable, deteriorating)</li>
+          </ul>
+          <div class="risk-level-key">
+            <span class="risk-level risk-level--critical"><span class="risk-level__dot"></span>Critical (15–25)</span>
+            <span class="risk-level risk-level--high"><span class="risk-level__dot"></span>High (10–14)</span>
+            <span class="risk-level risk-level--medium"><span class="risk-level__dot"></span>Medium (5–9)</span>
+            <span class="risk-level risk-level--low"><span class="risk-level__dot"></span>Low (1–4)</span>
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <h3>Escalation workflows</h3>
+          <p>When a risk score breaches your defined appetite, it escalates automatically. Owners get notified. Directors can review and accept or return for re-treatment. Nothing sits unacknowledged.</p>
+          <ul class="feature-list">
+            <li>Automatic escalation on appetite breach</li>
+            <li>Director and board-level review queues</li>
+            <li>Closure request process</li>
+            <li>Monthly review reminders</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <h3>Board-ready reporting</h3>
+          <p>Monthly reports are generated automatically — risk heatmap, status summary, top risks by residual score, and any risks outside appetite. PDF or in-app, ready to table at your next meeting.</p>
+          <ul class="feature-list">
+            <li>Executive summary dashboard</li>
+            <li>By-pillar and by-status breakdowns</li>
+            <li>Top risks by current residual</li>
+            <li>Month-on-month trend</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section section--subtle">
+    <div class="container">
+      <div class="stat-row">
+        <div class="stat-item">
+          <span class="stat-item__value">5×5</span>
+          <span class="stat-item__label">Likelihood × consequence matrix — the standard used in ISO 9001 and most enterprise risk frameworks</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-item__value">Monthly</span>
+          <span class="stat-item__label">Automated board report generated at the end of each month — no manual collation required</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-item__value">Automatic</span>
+          <span class="stat-item__label">Escalation when a risk breaches your defined appetite — no manual triage of the register</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section" id="how">
+    <div class="container">
+      <p class="eyebrow">THE PROCESS</p>
+      <h2 class="section__heading">From setup to first board report in a week.</h2>
+      <ol class="steps">
+        <li class="step">
+          <span class="step__number">1</span>
+          <div class="step__content">
+            <h3>Set your risk appetite</h3>
+            <p>Define what score is acceptable for each category of risk in your business. High appetite for strategic risk, low appetite for safety or regulatory risk — you set the thresholds. Axel flags anything that breaches them.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__number">2</span>
+          <div class="step__content">
+            <h3>Populate your register</h3>
+            <p>Log your known risks — or we run a facilitated risk identification session and do it with you. Assign owners, score each risk, and set a treatment plan. Most registers are live within two days of kickoff.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__number">3</span>
+          <div class="step__content">
+            <h3>Review on your cycle</h3>
+            <p>Owners get a reminder when a review is due. They update the score, treatment status, and trend direction. The dashboard updates immediately. Nothing relies on a manual report being run.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__number">4</span>
+          <div class="step__content">
+            <h3>Table it at your monthly meeting</h3>
+            <p>The monthly report is generated automatically at the end of each period — a heatmap, top risks, status summary, and any escalations outstanding. Ready to PDF and distribute, or present from the dashboard directly.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--subtle" id="contact">
+    <div class="container">
+      <div class="cta-block">
+        <h2>Your risks don't go away because they're not logged.</h2>
+        <p class="lead">If you're a director of an Australian SMB without a formal risk register — or with one that nobody uses — book a call. We'll walk through what a working register looks like and what it takes to get yours current.</p>
+        <p class="cta-note">30 minutes. We'll bring a blank register template and a list of the ten risks most SMBs in your industry miss.</p>
+        <a href="mailto:hello@axel.com.au" class="btn btn--primary btn--lg">Book a 30-minute call</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__wordmark">Axel</span>
+      <p class="footer__copy">Axel Risk Management is a register and workflow tool, not a certified risk management service. Risk scoring and appetite thresholds are set by your organisation. Axel does not provide risk advisory or insurance services.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

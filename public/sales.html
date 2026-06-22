@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Management — Axel</title>
+  <meta name="description" content="Track your pipeline, forecast revenue, and reconcile actuals against Xero and ServiceM8. Know what's coming before the invoice lands.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__wordmark">Axel</a>
+      <nav class="nav__links">
+        <div class="nav__dropdown">
+          <span class="nav__dropdown-trigger">Products</span>
+          <div class="nav__dropdown-menu">
+            <a href="/disp.html" class="nav__dropdown-item">
+              <strong>DISP Readiness</strong>
+              <span>Defence Industry Security Program</span>
+            </a>
+            <a href="/iso9001.html" class="nav__dropdown-item">
+              <strong>ISO 9001</strong>
+              <span>Quality management certification</span>
+            </a>
+            <a href="/essential-eight.html" class="nav__dropdown-item">
+              <strong>Essential Eight</strong>
+              <span>Cyber security maturity</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
+          <span class="nav__dropdown-trigger">Tools</span>
+          <div class="nav__dropdown-menu">
+            <a href="/sales.html" class="nav__dropdown-item nav__dropdown-item--active">
+              <strong>Sales Management</strong>
+              <span>Pipeline, forecasting, Xero sync</span>
+            </a>
+            <a href="/risk-management.html" class="nav__dropdown-item">
+              <strong>Risk Management</strong>
+              <span>Risk register and reporting</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <a href="#contact" class="btn btn--ghost">Book a call</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero--split">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow">SALES PIPELINE · FORECASTING · XERO · SERVICEM8</p>
+        <h1>Know which deals will close — and what they'll cost — before the invoice lands.</h1>
+        <p class="lead">Most pipeline trackers are a list of optimism. Axel Sales Management connects your leads and weighted forecast to real invoiced revenue in Xero and job data in ServiceM8 — so actuals keep your projections honest.</p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Book a 30-minute call</a>
+          <a href="#features" class="btn btn--ghost-inverse">See what's included</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="chart-preview">
+          <div class="chart-header">
+            <span class="chart-title">FY 2025–26 Revenue Forecast</span>
+            <div class="chart-legend">
+              <span class="legend-item legend-item--profit">Revenue</span>
+              <span class="legend-item legend-item--expense">Expenses</span>
+            </div>
+          </div>
+          <svg viewBox="0 0 480 215" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="g-rev" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#2D9B6B" stop-opacity="0.28"/>
+                <stop offset="100%" stop-color="#2D9B6B" stop-opacity="0.03"/>
+              </linearGradient>
+              <linearGradient id="g-exp" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#C47B3A" stop-opacity="0.32"/>
+                <stop offset="100%" stop-color="#C47B3A" stop-opacity="0.07"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Grid lines -->
+            <line x1="50" y1="10"  x2="460" y2="10"  stroke="rgba(249,248,246,0.06)" stroke-width="1"/>
+            <line x1="50" y1="55"  x2="460" y2="55"  stroke="rgba(249,248,246,0.06)" stroke-width="1"/>
+            <line x1="50" y1="100" x2="460" y2="100" stroke="rgba(249,248,246,0.06)" stroke-width="1"/>
+            <line x1="50" y1="145" x2="460" y2="145" stroke="rgba(249,248,246,0.06)" stroke-width="1"/>
+            <line x1="50" y1="180" x2="460" y2="180" stroke="rgba(249,248,246,0.1)"  stroke-width="1"/>
+
+            <!-- Y-axis labels -->
+            <text x="44" y="14"  text-anchor="end" fill="rgba(249,248,246,0.28)" font-size="9" font-family="'Plus Jakarta Sans', sans-serif">$200k</text>
+            <text x="44" y="103" text-anchor="end" fill="rgba(249,248,246,0.28)" font-size="9" font-family="'Plus Jakarta Sans', sans-serif">$100k</text>
+            <text x="44" y="183" text-anchor="end" fill="rgba(249,248,246,0.28)" font-size="9" font-family="'Plus Jakarta Sans', sans-serif">$0</text>
+
+            <!-- Revenue filled area -->
+            <polygon
+              points="50,113 87,103 124,108 161,89 199,81 236,92 273,71 310,58 348,64 385,47 422,39 459,20 459,180 50,180"
+              fill="url(#g-rev)"/>
+
+            <!-- Expense filled area (overlays lower portion, revealing profit gap above) -->
+            <polygon
+              points="50,128 87,123 124,126 161,114 199,108 236,116 273,103 310,96 348,99 385,89 422,84 459,77 459,180 50,180"
+              fill="url(#g-exp)"/>
+
+            <!-- Forecast divider -->
+            <line x1="273" y1="12" x2="273" y2="178" stroke="rgba(249,248,246,0.12)" stroke-width="1" stroke-dasharray="3,3"/>
+
+            <!-- Actuals / Forecast labels -->
+            <text x="90"  y="23" fill="rgba(249,248,246,0.22)" font-size="8" font-family="'Plus Jakarta Sans', sans-serif">← Actuals</text>
+            <text x="285" y="23" fill="rgba(249,248,246,0.22)" font-size="8" font-family="'Plus Jakarta Sans', sans-serif">Forecast →</text>
+
+            <!-- Revenue line — actual (solid) -->
+            <polyline points="50,113 87,103 124,108 161,89 199,81 236,92 273,71"
+              fill="none" stroke="#2D9B6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- Revenue line — forecast (dashed) -->
+            <polyline points="273,71 310,58 348,64 385,47 422,39 459,20"
+              fill="none" stroke="#2D9B6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5,3"/>
+
+            <!-- Expense line — actual (solid) -->
+            <polyline points="50,128 87,123 124,126 161,114 199,108 236,116 273,103"
+              fill="none" stroke="#C47B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- Expense line — forecast (dashed) -->
+            <polyline points="273,103 310,96 348,99 385,89 422,84 459,77"
+              fill="none" stroke="#C47B3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5,3"/>
+
+            <!-- Current month dot -->
+            <circle cx="273" cy="71"  r="3.5" fill="#2D9B6B"/>
+            <circle cx="273" cy="103" r="3.5" fill="#C47B3A"/>
+
+            <!-- Month labels (every second) -->
+            <text x="50"  y="197" text-anchor="middle" fill="rgba(249,248,246,0.28)" font-size="8" font-family="'Plus Jakarta Sans', sans-serif">Jul</text>
+            <text x="124" y="197" text-anchor="middle" fill="rgba(249,248,246,0.28)" font-size="8" font-family="'Plus Jakarta Sans', sans-serif">Sep</text>
+            <text x="199" y="197" text-anchor="middle" fill="rgba(249,248,246,0.28)" font-size="8" font-family="'Plus Jakarta Sans', sans-serif">Nov</text>
+            <text x="273" y="197" text-anchor="middle" fill="rgba(249,248,246,0.45)" font-size="8" font-family="'Plus Jakarta Sans', sans-serif">Jan</text>
+            <text x="348" y="197" text-anchor="middle" fill="rgba(249,248,246,0.28)" font-size="8" font-family="'Plus Jakarta Sans', sans-serif">Mar</text>
+            <text x="422" y="197" text-anchor="middle" fill="rgba(249,248,246,0.28)" font-size="8" font-family="'Plus Jakarta Sans', sans-serif">May</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="section section--subtle" id="problem">
+    <div class="container">
+      <div class="prose-block">
+        <h2>A pipeline that doesn't connect to your accounts is just a wish list.</h2>
+        <p class="lead">Probability-weighted forecasts are only useful when they're tested against what actually invoiced. Most tools stop at the estimate. Axel doesn't.</p>
+        <p>When Xero data syncs back against your open pipeline, you stop asking "is this deal realistic?" and start asking "what do I need to close next month to hit the number?" ServiceM8 job data feeds in too — so field service revenue isn't siloed from your sales view.</p>
+        <div class="integration-list">
+          <span class="integration-badge">Xero</span>
+          <span class="integration-badge">ServiceM8</span>
+          <span class="integration-badge">Manual import</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="container">
+      <p class="eyebrow">WHAT'S INCLUDED</p>
+      <h2 class="section__heading">Pipeline to payment, in one view.</h2>
+      <div class="detail-grid">
+
+        <div class="detail-card">
+          <h3>Lead and deal tracking</h3>
+          <p>Log every lead with a contact, deal value, stage, and close probability. Assign an owner. Set a target close date. That's it — no fields you'll never fill in.</p>
+          <ul class="feature-list">
+            <li>Kanban and list views</li>
+            <li>Stage-by-stage conversion tracking</li>
+            <li>Deal owner and team visibility</li>
+            <li>Notes and follow-up reminders</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <h3>Weighted revenue forecast</h3>
+          <p>Probability × deal value gives you a forecast line. The chart shows revenue and expense projections side by side, so you can see margin — not just top line — at a glance.</p>
+          <ul class="feature-list">
+            <li>Monthly and quarterly views</li>
+            <li>Revenue vs expense overlay</li>
+            <li>Profit gap visualisation</li>
+            <li>FY and rolling 12-month modes</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <h3>Xero and ServiceM8 reconciliation</h3>
+          <p>Invoiced amounts in Xero flow back into the forecast as actuals. ServiceM8 jobs map to deals automatically. Your projections update as the real numbers come in — you don't chase them.</p>
+          <ul class="feature-list">
+            <li>Xero invoice sync (daily)</li>
+            <li>ServiceM8 job-to-deal mapping</li>
+            <li>Forecast vs actual variance report</li>
+            <li>Manual override for edge cases</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section section--subtle">
+    <div class="container">
+      <div class="stat-row">
+        <div class="stat-item">
+          <span class="stat-item__value">1 view</span>
+          <span class="stat-item__label">Pipeline, forecast, and actuals in one place — no spreadsheet bridging required</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-item__value">Daily</span>
+          <span class="stat-item__label">Xero sync frequency — actuals update automatically, not when you remember to export</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-item__value">Margin</span>
+          <span class="stat-item__label">Not just revenue — the chart shows the gap between what you earn and what it costs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section" id="how">
+    <div class="container">
+      <p class="eyebrow">THE PROCESS</p>
+      <h2 class="section__heading">Set up in a day. Useful from week one.</h2>
+      <ol class="steps">
+        <li class="step">
+          <span class="step__number">1</span>
+          <div class="step__content">
+            <h3>Connect your accounts</h3>
+            <p>Authorise Xero and ServiceM8 via OAuth — read-only access, no credentials stored. Existing invoices and jobs import automatically. Most businesses are connected inside an hour.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__number">2</span>
+          <div class="step__content">
+            <h3>Load your pipeline</h3>
+            <p>Add your open deals — or import from a spreadsheet. Set a stage, a value, a probability, and a target close date. The forecast line populates immediately.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__number">3</span>
+          <div class="step__content">
+            <h3>Watch actuals reconcile</h3>
+            <p>As invoices land in Xero, they appear as actuals against the relevant deal. Forecast vs actual variance is visible on the same chart — no export, no pivot table.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__number">4</span>
+          <div class="step__content">
+            <h3>Review and adjust monthly</h3>
+            <p>Use the monthly variance report to see where your forecast drifted from reality. Adjust stage probabilities, close dates, or deal values. The forecast updates on save.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--subtle" id="contact">
+    <div class="container">
+      <div class="cta-block">
+        <h2>Your Xero data is already there. Put it to work.</h2>
+        <p class="lead">Axel Sales Management is built for Australian SMBs already using Xero or ServiceM8. If you're tracking pipeline in a spreadsheet and forecasting by gut feel, book a call — we'll show you what connected looks like.</p>
+        <p class="cta-note">30 minutes. We'll demo with your own chart of accounts if you want.</p>
+        <a href="mailto:hello@axel.com.au" class="btn btn--primary btn--lg">Book a 30-minute call</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__wordmark">Axel</span>
+      <p class="footer__copy">Axel Sales Management is a forecasting and pipeline tool, not a registered accounting service. Xero and ServiceM8 are third-party platforms — Axel is not affiliated with or endorsed by either. Always reconcile forecasts against your accountant's records.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
