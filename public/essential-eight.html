@@ -54,13 +54,136 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero hero--split">
     <div class="container hero__inner">
-      <p class="eyebrow">ACSC ESSENTIAL EIGHT</p>
-      <h1>A real Essential Eight maturity rating — documented, evidenced, and defensible.</h1>
-      <p class="lead">Government agencies and large enterprise customers are asking suppliers about their Essential Eight posture. We configure the controls, gather the evidence, and prepare you to answer confidently — whether that's for a tender response, customer due diligence, or a formal IRAP assessment.</p>
-      <div class="hero__actions">
-        <a href="#contact" class="btn btn--primary">Book a 30-minute call</a>
+      <div class="hero__text">
+        <p class="eyebrow">ACSC ESSENTIAL EIGHT</p>
+        <h1>A real Essential Eight maturity rating — documented, evidenced, and defensible.</h1>
+        <p class="lead">Government agencies and large enterprise customers are asking suppliers about their Essential Eight posture. We configure the controls, gather the evidence, and prepare you to answer confidently — whether that's for a tender response, customer due diligence, or a formal IRAP assessment.</p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Book a 30-minute call</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero-panel">
+          <div class="hero-panel__header">
+            <span class="hero-panel__title">Essential Eight controls</span>
+            <span class="hero-panel__status">Target ML2–ML3</span>
+          </div>
+
+          <details class="drawer-item" open>
+            <summary>
+              <span class="drawer-item__label">Application control</span>
+              <div class="e8-maturity">
+                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:50%"></div></div>
+                <span class="e8-maturity__level">ML2</span>
+              </div>
+              <span class="drawer-item__chevron"></span>
+            </summary>
+            <div class="drawer-item__body">
+              <p>Block unapproved executables from running. We configure AppLocker or WDAC policies with your approved application list.</p>
+            </div>
+          </details>
+
+          <details class="drawer-item">
+            <summary>
+              <span class="drawer-item__label">Patch applications</span>
+              <div class="e8-maturity">
+                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:75%"></div></div>
+                <span class="e8-maturity__level">ML3</span>
+              </div>
+              <span class="drawer-item__chevron"></span>
+            </summary>
+            <div class="drawer-item__body">
+              <p>Keep applications updated within two weeks of patch release. We configure automatic updates and monitor compliance.</p>
+            </div>
+          </details>
+
+          <details class="drawer-item">
+            <summary>
+              <span class="drawer-item__label">Configure macro settings</span>
+              <div class="e8-maturity">
+                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:75%"></div></div>
+                <span class="e8-maturity__level">ML3</span>
+              </div>
+              <span class="drawer-item__chevron"></span>
+            </summary>
+            <div class="drawer-item__body">
+              <p>Disable macros from internet-downloaded files. We configure Group Policy and Intune settings across your M365 environment.</p>
+            </div>
+          </details>
+
+          <details class="drawer-item">
+            <summary>
+              <span class="drawer-item__label">User application hardening</span>
+              <div class="e8-maturity">
+                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:50%"></div></div>
+                <span class="e8-maturity__level">ML2</span>
+              </div>
+              <span class="drawer-item__chevron"></span>
+            </summary>
+            <div class="drawer-item__body">
+              <p>Harden web browsers and PDF viewers. We configure browser policies and disable high-risk features across your fleet.</p>
+            </div>
+          </details>
+
+          <details class="drawer-item">
+            <summary>
+              <span class="drawer-item__label">Restrict admin privileges</span>
+              <div class="e8-maturity">
+                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:75%"></div></div>
+                <span class="e8-maturity__level">ML3</span>
+              </div>
+              <span class="drawer-item__chevron"></span>
+            </summary>
+            <div class="drawer-item__body">
+              <p>Limit who can administer systems and enforce least-privilege access. We audit your admin accounts and configure privileged access controls in Entra ID.</p>
+            </div>
+          </details>
+
+          <details class="drawer-item">
+            <summary>
+              <span class="drawer-item__label">Patch operating systems</span>
+              <div class="e8-maturity">
+                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:75%"></div></div>
+                <span class="e8-maturity__level">ML3</span>
+              </div>
+              <span class="drawer-item__chevron"></span>
+            </summary>
+            <div class="drawer-item__body">
+              <p>Keep Windows updated within two weeks of patch release. We configure Windows Update policies and monitor compliance across your devices.</p>
+            </div>
+          </details>
+
+          <details class="drawer-item">
+            <summary>
+              <span class="drawer-item__label">Multi-factor authentication</span>
+              <div class="e8-maturity">
+                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:75%"></div></div>
+                <span class="e8-maturity__level">ML3</span>
+              </div>
+              <span class="drawer-item__chevron"></span>
+            </summary>
+            <div class="drawer-item__body">
+              <p>Require MFA for all users and admin accounts. We configure Conditional Access policies in Entra ID using phishing-resistant methods where required.</p>
+            </div>
+          </details>
+
+          <details class="drawer-item">
+            <summary>
+              <span class="drawer-item__label">Regular backups</span>
+              <div class="e8-maturity">
+                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:50%"></div></div>
+                <span class="e8-maturity__level">ML2</span>
+              </div>
+              <span class="drawer-item__chevron"></span>
+            </summary>
+            <div class="drawer-item__body">
+              <p>Back up business-critical data and test restores. We configure and verify your backup regime meets Essential Eight requirements.</p>
+            </div>
+          </details>
+
+        </div>
       </div>
     </div>
   </section>
