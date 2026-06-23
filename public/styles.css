@@ -1472,6 +1472,169 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================================================
+   Compliance dashboard — status-based fills (DISP, ISO 9001)
+   ============================================================ */
+.e8dash__control--done    .e8dash__ctrl-fill { background: var(--dv-positive); }
+.e8dash__control--review  .e8dash__ctrl-fill { background: var(--dv-warning); }
+.e8dash__control--pending .e8dash__ctrl-fill { background: var(--sd-color-border-default); }
+
+.e8dash--animated .e8dash__control--done    .e8dash__ctrl-fill { width: 100%; }
+.e8dash--animated .e8dash__control--review  .e8dash__ctrl-fill { width: 55%;  }
+.e8dash--animated .e8dash__control--pending .e8dash__ctrl-fill { width: 12%;  }
+
+.e8dash__ctrl-status {
+  font-size: var(--sd-font-size-label);
+  font-weight: var(--sd-font-weight-heading);
+  white-space: nowrap;
+}
+.e8dash__ctrl-status--done    { color: var(--dv-positive); }
+.e8dash__ctrl-status--review  { color: var(--dv-warning); }
+.e8dash__ctrl-status--pending { color: var(--sd-color-text-tertiary); }
+
+/* Make clickable control rows interactive */
+.e8dash__control[data-detail] {
+  cursor: pointer;
+  user-select: none;
+}
+.e8dash__control[data-detail]:hover {
+  background: var(--sd-color-surface-subtle);
+  margin: 0 calc(-1 * var(--sd-space-component-lg));
+  padding-left: var(--sd-space-component-lg);
+  padding-right: var(--sd-space-component-lg);
+}
+.e8dash__control[data-detail][aria-expanded="true"] {
+  background: var(--sd-color-accent-subtle);
+  margin: 0 calc(-1 * var(--sd-space-component-lg));
+  padding-left: var(--sd-space-component-lg);
+  padding-right: var(--sd-space-component-lg);
+}
+
+/* Control row detail drawers */
+.e8dash__ctrl-drawer {
+  padding: 12px 0 14px 40px;
+  background: var(--sd-color-surface-page);
+  border-top: 1px solid var(--sd-color-border-default);
+  border-bottom: 1px solid var(--sd-color-border-default);
+  margin-top: -1px;
+}
+.e8dash__ctrl-drawer--hidden {
+  display: none;
+}
+.e8dash__ctrl-drawer > p {
+  font-size: var(--sd-font-size-caption);
+  color: var(--sd-color-text-secondary);
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+.e8dash__ctrl-evidence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.e8dash__ctrl-evidence-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--sd-font-size-label);
+  color: var(--sd-color-text-secondary);
+  background: var(--sd-color-surface-raised);
+  border: 1px solid var(--sd-color-border-default);
+  border-radius: var(--sd-radius-input);
+  padding: 3px 8px;
+}
+
+/* ISO 9001 audit timeline */
+.e8dash__timeline {
+  padding: 20px var(--sd-space-component-lg) 28px;
+  display: flex;
+  flex-direction: column;
+}
+.e8dash__tl-item {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 16px;
+  align-items: start;
+  padding-bottom: 20px;
+  position: relative;
+}
+.e8dash__tl-item:last-child {
+  padding-bottom: 0;
+}
+.e8dash__tl-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 13px;
+  top: 28px;
+  bottom: 0;
+  width: 1px;
+  background: var(--sd-color-border-default);
+}
+.e8dash__tl-node {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--sd-color-border-default);
+  background: var(--sd-color-surface-raised);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 1;
+  position: relative;
+}
+.e8dash__tl-item--complete .e8dash__tl-node {
+  background: var(--dv-positive);
+  border-color: var(--dv-positive);
+}
+.e8dash__tl-item--complete .e8dash__tl-node::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 5px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg) translate(0.5px, -0.5px);
+}
+.e8dash__tl-item--active .e8dash__tl-node {
+  border-color: var(--sd-color-accent-default);
+  background: var(--sd-color-accent-subtle);
+}
+.e8dash__tl-item--active .e8dash__tl-node::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sd-color-accent-default);
+}
+.e8dash__tl-content {
+  padding-top: 3px;
+}
+.e8dash__tl-label {
+  font-size: var(--sd-font-size-caption);
+  font-weight: var(--sd-font-weight-emphasis);
+  color: var(--sd-color-text-primary);
+  margin-bottom: 2px;
+}
+.e8dash__tl-item--pending .e8dash__tl-label {
+  color: var(--sd-color-text-tertiary);
+}
+.e8dash__tl-date {
+  font-size: var(--sd-font-size-label);
+  color: var(--sd-color-text-tertiary);
+}
+.e8dash__tl-badge {
+  font-size: var(--sd-font-size-label);
+  font-weight: var(--sd-font-weight-heading);
+  padding: 2px 8px;
+  border-radius: var(--sd-radius-badge);
+  margin-top: 4px;
+  white-space: nowrap;
+  align-self: start;
+}
+.e8dash__tl-badge--upcoming { background: rgba(44, 95, 212, 0.1); color: var(--sd-color-accent-default); }
+.e8dash__tl-badge--pending  { background: var(--sd-color-surface-subtle); color: var(--sd-color-text-tertiary); }
+
+/* ============================================================
    Responsive additions
    ============================================================ */
 @media (max-width: 860px) {
@@ -1483,6 +1646,19 @@ a { color: inherit; text-decoration: none; }
   .hero__visual {
     display: none;
   }
+}
+
+/* Step link (persona/service pages) */
+.step__link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: var(--sd-font-size-caption);
+  font-weight: var(--sd-font-weight-emphasis);
+  color: var(--sd-color-accent-default);
+  text-decoration: none;
+}
+.step__link:hover {
+  color: var(--sd-color-accent-hover);
 }
 
 /* Responsive */

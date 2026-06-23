@@ -36,6 +36,15 @@
           </div>
         </div>
         <div class="nav__dropdown">
+          <span class="nav__dropdown-trigger">Services</span>
+          <div class="nav__dropdown-menu">
+            <a href="/defence-founder.html" class="nav__dropdown-item">
+              <strong>Defence Industry Entry</strong>
+              <span>From ex-defence to contracted supplier</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
           <span class="nav__dropdown-trigger">Tools</span>
           <div class="nav__dropdown-menu">
             <a href="/sales.html" class="nav__dropdown-item">
@@ -54,136 +63,234 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero hero--split">
+  <section class="hero">
     <div class="container hero__inner">
-      <div class="hero__text">
-        <p class="eyebrow">ACSC ESSENTIAL EIGHT</p>
-        <h1>A real Essential Eight maturity rating — documented, evidenced, and defensible.</h1>
-        <p class="lead">Government agencies and large enterprise customers are asking suppliers about their Essential Eight posture. We configure the controls, gather the evidence, and prepare you to answer confidently — whether that's for a tender response, customer due diligence, or a formal IRAP assessment.</p>
-        <div class="hero__actions">
-          <a href="#contact" class="btn btn--primary">Book a 30-minute call</a>
-        </div>
+      <p class="eyebrow">ACSC ESSENTIAL EIGHT</p>
+      <h1>A real Essential Eight maturity rating — documented, evidenced, and defensible.</h1>
+      <p class="lead">Government agencies and large enterprise customers are asking suppliers about their Essential Eight posture. We configure the controls, gather the evidence, and prepare you to answer confidently — whether that's for a tender response, customer due diligence, or a formal IRAP assessment.</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">Book a 30-minute call</a>
       </div>
-      <div class="hero__visual">
-        <div class="hero-panel">
-          <div class="hero-panel__header">
-            <span class="hero-panel__title">Essential Eight controls</span>
-            <span class="hero-panel__status">Target ML2–ML3</span>
+    </div>
+  </section>
+
+  <!-- Platform preview -->
+  <section class="section section--subtle">
+    <div class="container">
+      <p class="eyebrow">THE PLATFORM</p>
+      <h2 class="section__heading">All eight controls. Evidence for each one. One place to see your rating.</h2>
+    </div>
+    <div class="container">
+      <div class="e8dash">
+
+        <div class="e8dash__topbar">
+          <div class="e8dash__tenant">
+            <span class="e8dash__tenant-name">Essential Eight Workspace</span>
+            <span class="e8dash__tenant-tag">ML2 current · ML3 target</span>
+          </div>
+          <div class="e8dash__live">
+            <span class="e8dash__live-dot"></span>
+            Meridian Engineering Pty Ltd
+          </div>
+        </div>
+
+        <div class="e8dash__summary">
+          <div class="e8dash__score">
+            <div class="e8dash__ring-wrap">
+              <svg class="e8dash__ring" viewBox="0 0 96 96" width="96" height="96">
+                <circle class="e8dash__ring-track" cx="48" cy="48" r="40"/>
+                <circle class="e8dash__ring-fill" cx="48" cy="48" r="40" data-score="75"/>
+              </svg>
+              <span class="e8dash__score-num">ML2</span>
+            </div>
+            <div>
+              <p class="e8dash__score-eyebrow">Current rating</p>
+              <p class="e8dash__score-rating">Maturing</p>
+              <p class="e8dash__score-sub">5 of 8 controls at ML3</p>
+            </div>
+          </div>
+          <div class="e8dash__kpis">
+            <div class="e8dash__kpi e8dash__kpi--pass">
+              <span class="e8dash__kpi-val">5</span>
+              <span class="e8dash__kpi-name">At ML3</span>
+              <span class="e8dash__kpi-sub">Target met</span>
+            </div>
+            <div class="e8dash__kpi">
+              <span class="e8dash__kpi-val">3</span>
+              <span class="e8dash__kpi-name">At ML2</span>
+              <span class="e8dash__kpi-sub">In progress</span>
+            </div>
+            <div class="e8dash__kpi">
+              <span class="e8dash__kpi-val">14</span>
+              <span class="e8dash__kpi-name">Evidence items</span>
+              <span class="e8dash__kpi-sub">This week</span>
+            </div>
+            <div class="e8dash__kpi">
+              <span class="e8dash__kpi-val">0</span>
+              <span class="e8dash__kpi-name">Open gaps</span>
+              <span class="e8dash__kpi-sub">All active</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="e8dash__section-head">
+          <span class="e8dash__section-title">Essential Eight controls</span>
+          <span class="e8dash__section-meta">ACSC maturity model · click a control to see what was configured</span>
+        </div>
+        <div class="e8dash__controls">
+
+          <div class="e8dash__control e8dash__control--ml2" data-detail="e8-c1" aria-expanded="false">
+            <span class="e8dash__ctrl-num">1</span>
+            <span class="e8dash__ctrl-name">Application control</span>
+            <div class="e8dash__ctrl-bar"><div class="e8dash__ctrl-fill"></div></div>
+            <div class="e8dash__ctrl-badges"><span class="e8dash__ml-badge e8dash__ml-badge--2">ML2</span></div>
+          </div>
+          <div class="e8dash__ctrl-drawer e8dash__ctrl-drawer--hidden" id="e8-c1">
+            <p>Block unapproved executables from running across all Windows devices. AppLocker policies configured with your approved application list, enforced via Intune.</p>
+            <div class="e8dash__ctrl-evidence">
+              <span class="e8dash__ctrl-evidence-tag">AppLocker policy export</span>
+              <span class="e8dash__ctrl-evidence-tag">Intune device compliance report</span>
+            </div>
           </div>
 
-          <details class="drawer-item" open>
-            <summary>
-              <span class="drawer-item__label">Application control</span>
-              <div class="e8-maturity">
-                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:50%"></div></div>
-                <span class="e8-maturity__level">ML2</span>
-              </div>
-              <span class="drawer-item__chevron"></span>
-            </summary>
-            <div class="drawer-item__body">
-              <p>Block unapproved executables from running. We configure AppLocker or WDAC policies with your approved application list.</p>
+          <div class="e8dash__control e8dash__control--ml3" data-detail="e8-c2" aria-expanded="false">
+            <span class="e8dash__ctrl-num">2</span>
+            <span class="e8dash__ctrl-name">Patch applications</span>
+            <div class="e8dash__ctrl-bar"><div class="e8dash__ctrl-fill"></div></div>
+            <div class="e8dash__ctrl-badges"><span class="e8dash__ml-badge e8dash__ml-badge--3">ML3</span></div>
+          </div>
+          <div class="e8dash__ctrl-drawer e8dash__ctrl-drawer--hidden" id="e8-c2">
+            <p>Applications patched within 48 hours of critical release, two weeks for all others. Automatic updates configured in Intune with weekly compliance monitoring.</p>
+            <div class="e8dash__ctrl-evidence">
+              <span class="e8dash__ctrl-evidence-tag">Patch compliance report</span>
+              <span class="e8dash__ctrl-evidence-tag">Intune update policy screenshot</span>
             </div>
-          </details>
+          </div>
 
-          <details class="drawer-item">
-            <summary>
-              <span class="drawer-item__label">Patch applications</span>
-              <div class="e8-maturity">
-                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:75%"></div></div>
-                <span class="e8-maturity__level">ML3</span>
-              </div>
-              <span class="drawer-item__chevron"></span>
-            </summary>
-            <div class="drawer-item__body">
-              <p>Keep applications updated within two weeks of patch release. We configure automatic updates and monitor compliance.</p>
+          <div class="e8dash__control e8dash__control--ml3" data-detail="e8-c3" aria-expanded="false">
+            <span class="e8dash__ctrl-num">3</span>
+            <span class="e8dash__ctrl-name">Configure macro settings</span>
+            <div class="e8dash__ctrl-bar"><div class="e8dash__ctrl-fill"></div></div>
+            <div class="e8dash__ctrl-badges"><span class="e8dash__ml-badge e8dash__ml-badge--3">ML3</span></div>
+          </div>
+          <div class="e8dash__ctrl-drawer e8dash__ctrl-drawer--hidden" id="e8-c3">
+            <p>Macros disabled in internet-downloaded Office files. Digitally signed macros from trusted locations allowed. Configured via Intune and Group Policy.</p>
+            <div class="e8dash__ctrl-evidence">
+              <span class="e8dash__ctrl-evidence-tag">Intune config profile export</span>
+              <span class="e8dash__ctrl-evidence-tag">Group Policy Object screenshot</span>
             </div>
-          </details>
+          </div>
 
-          <details class="drawer-item">
-            <summary>
-              <span class="drawer-item__label">Configure macro settings</span>
-              <div class="e8-maturity">
-                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:75%"></div></div>
-                <span class="e8-maturity__level">ML3</span>
-              </div>
-              <span class="drawer-item__chevron"></span>
-            </summary>
-            <div class="drawer-item__body">
-              <p>Disable macros from internet-downloaded files. We configure Group Policy and Intune settings across your M365 environment.</p>
+          <div class="e8dash__control e8dash__control--ml2" data-detail="e8-c4" aria-expanded="false">
+            <span class="e8dash__ctrl-num">4</span>
+            <span class="e8dash__ctrl-name">User application hardening</span>
+            <div class="e8dash__ctrl-bar"><div class="e8dash__ctrl-fill"></div></div>
+            <div class="e8dash__ctrl-badges"><span class="e8dash__ml-badge e8dash__ml-badge--2">ML2</span></div>
+          </div>
+          <div class="e8dash__ctrl-drawer e8dash__ctrl-drawer--hidden" id="e8-c4">
+            <p>Web browsers hardened — Java disabled, Flash blocked, advertisements blocked. PDF viewer configured to prevent script execution. Managed via Intune browser policies.</p>
+            <div class="e8dash__ctrl-evidence">
+              <span class="e8dash__ctrl-evidence-tag">Browser policy config screenshot</span>
+              <span class="e8dash__ctrl-evidence-tag">Edge security baseline export</span>
             </div>
-          </details>
+          </div>
 
-          <details class="drawer-item">
-            <summary>
-              <span class="drawer-item__label">User application hardening</span>
-              <div class="e8-maturity">
-                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:50%"></div></div>
-                <span class="e8-maturity__level">ML2</span>
-              </div>
-              <span class="drawer-item__chevron"></span>
-            </summary>
-            <div class="drawer-item__body">
-              <p>Harden web browsers and PDF viewers. We configure browser policies and disable high-risk features across your fleet.</p>
+          <div class="e8dash__control e8dash__control--ml3" data-detail="e8-c5" aria-expanded="false">
+            <span class="e8dash__ctrl-num">5</span>
+            <span class="e8dash__ctrl-name">Restrict admin privileges</span>
+            <div class="e8dash__ctrl-bar"><div class="e8dash__ctrl-fill"></div></div>
+            <div class="e8dash__ctrl-badges"><span class="e8dash__ml-badge e8dash__ml-badge--3">ML3</span></div>
+          </div>
+          <div class="e8dash__ctrl-drawer e8dash__ctrl-drawer--hidden" id="e8-c5">
+            <p>Admin accounts audited and reduced to minimum required. Privileged access managed via Entra ID PIM — just-in-time elevation for IT administrator tasks. No shared admin passwords.</p>
+            <div class="e8dash__ctrl-evidence">
+              <span class="e8dash__ctrl-evidence-tag">Admin account audit report</span>
+              <span class="e8dash__ctrl-evidence-tag">Entra PIM configuration screenshot</span>
             </div>
-          </details>
+          </div>
 
-          <details class="drawer-item">
-            <summary>
-              <span class="drawer-item__label">Restrict admin privileges</span>
-              <div class="e8-maturity">
-                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:75%"></div></div>
-                <span class="e8-maturity__level">ML3</span>
-              </div>
-              <span class="drawer-item__chevron"></span>
-            </summary>
-            <div class="drawer-item__body">
-              <p>Limit who can administer systems and enforce least-privilege access. We audit your admin accounts and configure privileged access controls in Entra ID.</p>
+          <div class="e8dash__control e8dash__control--ml3" data-detail="e8-c6" aria-expanded="false">
+            <span class="e8dash__ctrl-num">6</span>
+            <span class="e8dash__ctrl-name">Patch operating systems</span>
+            <div class="e8dash__ctrl-bar"><div class="e8dash__ctrl-fill"></div></div>
+            <div class="e8dash__ctrl-badges"><span class="e8dash__ml-badge e8dash__ml-badge--3">ML3</span></div>
+          </div>
+          <div class="e8dash__ctrl-drawer e8dash__ctrl-drawer--hidden" id="e8-c6">
+            <p>Windows updated within 48 hours of critical patch release. Update rings configured in Intune. Devices out of compliance flagged weekly and escalated after seven days.</p>
+            <div class="e8dash__ctrl-evidence">
+              <span class="e8dash__ctrl-evidence-tag">OS patch compliance report</span>
+              <span class="e8dash__ctrl-evidence-tag">Intune update ring configuration</span>
             </div>
-          </details>
+          </div>
 
-          <details class="drawer-item">
-            <summary>
-              <span class="drawer-item__label">Patch operating systems</span>
-              <div class="e8-maturity">
-                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:75%"></div></div>
-                <span class="e8-maturity__level">ML3</span>
-              </div>
-              <span class="drawer-item__chevron"></span>
-            </summary>
-            <div class="drawer-item__body">
-              <p>Keep Windows updated within two weeks of patch release. We configure Windows Update policies and monitor compliance across your devices.</p>
+          <div class="e8dash__control e8dash__control--ml3" data-detail="e8-c7" aria-expanded="false">
+            <span class="e8dash__ctrl-num">7</span>
+            <span class="e8dash__ctrl-name">Multi-factor authentication</span>
+            <div class="e8dash__ctrl-bar"><div class="e8dash__ctrl-fill"></div></div>
+            <div class="e8dash__ctrl-badges"><span class="e8dash__ml-badge e8dash__ml-badge--3">ML3</span></div>
+          </div>
+          <div class="e8dash__ctrl-drawer e8dash__ctrl-drawer--hidden" id="e8-c7">
+            <p>MFA required for all users and administrators. Phishing-resistant methods (FIDO2, Windows Hello for Business) enforced for privileged access. Legacy authentication blocked entirely.</p>
+            <div class="e8dash__ctrl-evidence">
+              <span class="e8dash__ctrl-evidence-tag">Conditional access policy screenshot</span>
+              <span class="e8dash__ctrl-evidence-tag">MFA registration report</span>
+              <span class="e8dash__ctrl-evidence-tag">Legacy auth sign-in log (zero entries)</span>
             </div>
-          </details>
+          </div>
 
-          <details class="drawer-item">
-            <summary>
-              <span class="drawer-item__label">Multi-factor authentication</span>
-              <div class="e8-maturity">
-                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:75%"></div></div>
-                <span class="e8-maturity__level">ML3</span>
-              </div>
-              <span class="drawer-item__chevron"></span>
-            </summary>
-            <div class="drawer-item__body">
-              <p>Require MFA for all users and admin accounts. We configure Conditional Access policies in Entra ID using phishing-resistant methods where required.</p>
+          <div class="e8dash__control e8dash__control--ml2" data-detail="e8-c8" aria-expanded="false">
+            <span class="e8dash__ctrl-num">8</span>
+            <span class="e8dash__ctrl-name">Regular backups</span>
+            <div class="e8dash__ctrl-bar"><div class="e8dash__ctrl-fill"></div></div>
+            <div class="e8dash__ctrl-badges"><span class="e8dash__ml-badge e8dash__ml-badge--2">ML2</span></div>
+          </div>
+          <div class="e8dash__ctrl-drawer e8dash__ctrl-drawer--hidden" id="e8-c8">
+            <p>Business-critical data backed up daily. M365 Backup enabled for SharePoint, OneDrive, and Exchange. Restore tested quarterly — last test confirmed 15-minute recovery for all services.</p>
+            <div class="e8dash__ctrl-evidence">
+              <span class="e8dash__ctrl-evidence-tag">M365 Backup configuration export</span>
+              <span class="e8dash__ctrl-evidence-tag">Quarterly restore test record</span>
             </div>
-          </details>
-
-          <details class="drawer-item">
-            <summary>
-              <span class="drawer-item__label">Regular backups</span>
-              <div class="e8-maturity">
-                <div class="e8-maturity__bar"><div class="e8-maturity__fill" style="width:50%"></div></div>
-                <span class="e8-maturity__level">ML2</span>
-              </div>
-              <span class="drawer-item__chevron"></span>
-            </summary>
-            <div class="drawer-item__body">
-              <p>Back up business-critical data and test restores. We configure and verify your backup regime meets Essential Eight requirements.</p>
-            </div>
-          </details>
+          </div>
 
         </div>
+
+        <div class="e8dash__section-head">
+          <span class="e8dash__section-title">Entra ID and logging</span>
+          <span class="e8dash__section-meta">Supporting controls</span>
+        </div>
+        <div class="e8dash__entra">
+          <div class="e8dash__entra-item">
+            <div class="e8dash__entra-status">Active</div>
+            <div class="e8dash__entra-name">Conditional access</div>
+            <div class="e8dash__entra-detail">All users · phishing-resistant MFA</div>
+          </div>
+          <div class="e8dash__entra-item">
+            <div class="e8dash__entra-status">Active</div>
+            <div class="e8dash__entra-name">Microsoft Defender</div>
+            <div class="e8dash__entra-detail">Cloud protection + ASR rules</div>
+          </div>
+          <div class="e8dash__entra-item">
+            <div class="e8dash__entra-status">Active</div>
+            <div class="e8dash__entra-name">Entra ID audit logs</div>
+            <div class="e8dash__entra-detail">180-day retention · SIEM export</div>
+          </div>
+          <div class="e8dash__entra-item">
+            <div class="e8dash__entra-status">Active</div>
+            <div class="e8dash__entra-name">Defender for Endpoint</div>
+            <div class="e8dash__entra-detail">All 12 devices enrolled</div>
+          </div>
+          <div class="e8dash__entra-item">
+            <div class="e8dash__entra-status">Active</div>
+            <div class="e8dash__entra-name">Sensitivity labels</div>
+            <div class="e8dash__entra-detail">UNOFFICIAL · OFFICIAL · OFFICIAL:Sensitive</div>
+          </div>
+          <div class="e8dash__entra-item">
+            <div class="e8dash__entra-status">Active</div>
+            <div class="e8dash__entra-name">Intune device management</div>
+            <div class="e8dash__entra-detail">12 devices enrolled · all compliant</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -304,5 +411,6 @@
     </div>
   </footer>
 
+  <script src="dashboard.js"></script>
 </body>
 </html>
